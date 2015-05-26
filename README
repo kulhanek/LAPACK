@@ -1,0 +1,3 @@
+# lapack
+copy of native LAPACK implementation (lapack/3.1.1)
+http://www.netlib.org/lapack/index.html
