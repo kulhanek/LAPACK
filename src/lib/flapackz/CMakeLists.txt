@@ -347,8 +347,11 @@ IF(LIBS_SHARED)
                             OUTPUT_NAME flapackz
                             CLEAN_DIRECT_OUTPUT 1
                             VERSION ${LAPACK_VERSION})
+                            
+    ADD_DEPENDENCIES(flapackz_shared flapackd_shared)
     TARGET_LINK_LIBRARIES(flapackz_shared
                         flapackd_shared ${BLASZ_LIB_NAME} ${BLASD_LIB_NAME})
+                        
     INSTALL(TARGETS flapackz_shared
             DESTINATION lib)
 ENDIF(LIBS_SHARED)
